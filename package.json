@@ -6,7 +6,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
-    "rss-to-json": "git+https://github.com/MikkelSandbag/rss-to-json.git#rss-to-json-itunes-support"
+    "rss-to-json": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

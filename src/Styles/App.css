@@ -1,0 +1,117 @@
+/* Generic Styles for the App */
+:root {
+  --main-bg-color: #383838;
+  --heading-text-color: #fff;
+  --body-text-color: #505050;
+  --link-text-color: #be95c4;
+  --card-bg-color: #cbcbcb;
+  --card-padding: 1.5rem;
+  --card-border-bottom-color: #be95c4;
+  --card-button-bg-color: #5e548e;
+  --card-button-border-width: .25rem;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--body-text-color);
+  background-color: var(--main-bg-color);
+}
+
+.App {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--heading-text-color);
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2em;
+  color: var(--main-bg-color);
+  background-color: var(--heading-text-color);
+}
+
+a:link,
+a:visited {
+  color: var(--link-text-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+  border-bottom-color: var(--link-text-color);
+}
+
+.episodeListWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+  .episodeItem {
+    flex: 0 1 auto;
+    width: calc(25% - 2rem);
+    min-width: 300px;
+    background-color: var(--card-bg-color);
+    border-bottom: .25rem solid var(--card-border-bottom-color);
+    border-radius: .25rem;
+    padding: var(--card-padding);
+    margin: 1rem;
+    position: relative;
+  }
+    .episodeTitle {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      line-height: 1.25rem;
+      min-height: calc(1.25rem * 5);
+      margin-bottom: 7rem;
+    }
+
+    .goToEpisodeButton {
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+      .goToEpisodeButton .goToEpisodeLink {
+        color: var(--card-bg-color);
+        background-color: var(--card-button-bg-color);
+        border: 0;
+        border-bottom: var(--card-button-border-width) solid transparent;
+        border-radius: .15rem;
+        display: inline-block;
+        padding: calc(var(--card-button-border-width) * 2) calc(1rem - var(--card-button-border-width)) var(--card-button-border-width);
+      }
+        .goToEpisodeButton .goToEpisodeLink:hover {
+          border-bottom-color: var(--link-text-color);
+        }
+
+    .metaData {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      bottom: var(--card-padding);
+      left: 0;
+    }
+      .timeStamp:after {
+        content: '//';
+        margin: 0 .5rem;
+      }

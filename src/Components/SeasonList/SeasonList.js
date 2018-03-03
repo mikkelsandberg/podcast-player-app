@@ -1,5 +1,5 @@
 import React from 'react';
-import Episode from './Episode';
+import Episode from '../Episode/Episode';
 import PropTypes from 'prop-types';
 
 const SeasonList = props =>

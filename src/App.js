@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import Feed from 'rss-to-json';
-import EpisodeList from './EpisodeList';
+import EpisodeList from './Components/EpisodeList/EpisodeList';
+import './Styles/reset.css';
+import './Styles/App.css';
 
-class App extends Component {
-  state = {};
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      feed: undefined
+    };
+  };
 
   loadFeed = () => {
     Feed.load('https://friendquestpodcast.podbean.com/feed/', (err, rss) => {
@@ -45,5 +52,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
