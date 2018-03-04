@@ -42,6 +42,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
+        { this.state.feed === undefined && <h1 className="loadingScreen">Loading...</h1> }
         { this.state && this.state.feed &&
           <EpisodeList
             podcast_title={this.state.feed.title}
