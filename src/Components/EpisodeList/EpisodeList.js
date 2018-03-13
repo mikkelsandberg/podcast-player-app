@@ -1,25 +1,27 @@
 import React from 'react';
-import LatestEpisode from '../LatestEpisode/LatestEpisode';
-import SeasonList from '../SeasonList/SeasonList';
+import Episode from '../Episode/Episode';
 import PropTypes from 'prop-types';
 
-const EpisodeList = props =>
-  <div>
-    <h1>{props.podcast_title}</h1>
-    <h2>Latest Episode</h2>
-    <LatestEpisode
-      items={props.items}
-      formatTime={props.formatTime} />
-    <h2>Seasons</h2>
-    <SeasonList
-      items={props.items}
-      formatTime={props.formatTime} />
+const SeasonList = props =>
+  <div className="seasonWrapper">
+    <div className="episodeListWrapper">
+      {props.items.map((item, id) =>
+        <Episode
+          key={id}
+          link={item.link}
+          title={item.title}
+          duration={item.itunes_duration}
+          description={item.itunes_subtitle}
+          season={item.itunes_season}
+          episode={item.itunes_episode}
+          formatTime={props.formatTime} />
+      )}
+    </div>
   </div>;
 
-EpisodeList.propTypes = {
-  podcast_title: PropTypes.string.isRequired,
+SeasonList.propTypes = {
   items: PropTypes.array.isRequired,
   formatTime: PropTypes.func.isRequired
 };
 
-export default EpisodeList;
+export default SeasonList;

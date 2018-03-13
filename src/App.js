@@ -43,11 +43,14 @@ export class App extends Component {
     return (
       <div className="App">
         { this.state.feed === undefined && <h1 className="loadingScreen">Loading...</h1> }
-        { this.state && this.state.feed &&
-          <EpisodeList
-            podcast_title={this.state.feed.title}
-            items={this.state.feed.items}
-            formatTime={this.formatTime} />
+        { this.state.feed &&
+          <div>
+            <h1>{this.state.feed.title}</h1>
+            <h2>Episodes</h2>
+            <EpisodeList
+              items={this.state.feed.items}
+              formatTime={this.formatTime} />
+          </div>
         }
       </div>  
     );
