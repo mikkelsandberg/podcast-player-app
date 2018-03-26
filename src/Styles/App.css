@@ -87,38 +87,27 @@ a:focus {
 
     .description {
       line-height: 1.25rem;
-      min-height: calc(1.25rem * 5);
-      margin-bottom: 7rem;
+      margin-bottom: 6rem;
     }
 
-    .goToEpisodeButton {
-      position: absolute;
-      bottom: 4rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-      .goToEpisodeButton .goToEpisodeLink {
-        color: var(--card-bg-color);
-        background-color: var(--card-button-bg-color);
-        border: 0;
-        border-bottom: var(--card-button-border-width) solid transparent;
-        border-radius: .15rem;
-        display: inline-block;
-        padding: calc(var(--card-button-border-width) * 2) calc(1rem - var(--card-button-border-width)) var(--card-button-border-width);
-      }
-        .goToEpisodeButton .goToEpisodeLink:hover {
-          border-bottom-color: var(--link-text-color);
-        }
-
-    .metaData {
-      display: flex;
-      justify-content: center;
+    .bottomContent {
+      background-color: #fff;
       width: 100%;
       position: absolute;
-      bottom: var(--card-padding);
+      bottom: 0;
       left: 0;
     }
-      .timeStamp:after {
-        content: '//';
-        margin: 0 .5rem;
+      .metaData {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
       }
+        .metaData p {
+          font-size: .75rem;
+          line-height: 1em;
+        }
+
+        .timeStamp:after {
+          content: '//';
+          margin: 0 .5rem;
+        }

@@ -13,7 +13,7 @@ export class App extends Component {
   };
 
   loadFeed = () => {
-    Feed.load('https://friendquestpodcast.podbean.com/feed/', (err, rss) => {
+    Feed.load('https://cors-anywhere.herokuapp.com/https://friendquestpodcast.podbean.com/feed/', (err, rss) => {
       this.setState({
         feed: rss
       });
