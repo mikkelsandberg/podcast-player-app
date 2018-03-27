@@ -8,16 +8,16 @@ class Episode extends React.Component {
         <h3 className="episodeTitle"><a href={this.props.link} target="_blank">{this.props.title}</a></h3>
         <p className="description">{this.props.description}</p>
         <div className="bottomContent">
-          <div className="mediaPlayer">
+          <div className="mediaPlayer"> 
             <Audio
               width={300}
               color={'#505050'}
               playlist={[
-                  {
-                    name: this.props.title,
-                    src: this.props.audioLink
-                  }
-                ]} />
+                {
+                  name: this.props.title,
+                  src: this.props.audioLink
+                }
+              ]} />
           </div>
           <div className="metaData">
             <p className="timeStamp">{this.props.formatTime(this.props.duration).hours}h {this.props.formatTime(this.props.duration).minutes}m {this.props.formatTime(this.props.duration).seconds}s</p>
